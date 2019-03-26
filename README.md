@@ -103,12 +103,12 @@
   * **Return:** (object)
   
 # Examples:
-> Actually you can test it using <https://api.mundosmilies.com/v2/load.php?t=MODE&v=ARGS>
+> Actually you can test it using <https://xatblog.net/api/load.php?t=MODE&v=ARGS>
 
-* <https://api.mundosmilies.com/v2/load.php?t=shortname&v=DaBest>
-* <https://api.mundosmilies.com/v2/load.php?t=id2reg&v=42>
-* <https://api.mundosmilies.com/v2/load.php?t=latest>
-* <https://api.mundosmilies.com/v2/load.php?t=promoted>
+* <https://xatblog.net/api/load.php?t=shortname&v=DaBest>
+* <https://xatblog.net/api/load.php?t=id2reg&v=42>
+* <https://xatblog.net/api/load.php?t=latest>
+* <https://xatblog.net/api/load.php?t=promoted>
 
 # License & Version:
 * MIT
