@@ -103,7 +103,7 @@
   * **Return:** (object)
   
 # Examples:
-> Actually you can test it using <api.mundosmilies.com/v2/load.php?t=MODE&v=ARGS>
+> Actually you can test it using <https://api.mundosmilies.com/v2/load.php?t=MODE&v=ARGS>
 
 * <https://api.mundosmilies.com/v2/load.php?t=shortname&v=DaBest>
 * <https://api.mundosmilies.com/v2/load.php?t=id2reg&v=42>
