@@ -643,21 +643,22 @@ class xatClass {
 			return false;
 		}
 		
-		preg_match('/map.areas\=\s*([^\;]+)/', $getPage, $matches);
-		preg_match_all('@{title:"(.*?): (.*?)%",id:"(.*?)",value:"(.*?)"}@i', $matches[1], $countries);
+        preg_match('/id="visitorPercentage">(.*?)<\//', $getPage, $matches);
+
+        $fixed = preg_replace('/[\x00-\x1F\x7F-\xFF]/', '', $matches[1]); //someone missed invisible chars in alexa internal's
+		$json = json_decode($fixed, true);
+        
 		$results = array();
 		
-		if (empty($countries)) {
+		if (empty($json)) {
 			return false;
 		}
 		
-		for ($i = 0; $i <= 4; $i++) {
-			$position = $i+1;
-			
-			$results[$position] = [
-				'flag'        => $countries[3][$i],
-				'country'     => $countries[1][$i],
-				'visitors'    => $countries[2][$i] . '%'
+		foreach($json as $k => $v) {
+
+			$results[$k+1] = [
+				'country'     => $v['name'],
+				'visitors'    => $v['visitors_percent']. '%'
 			];
 		}
 		
